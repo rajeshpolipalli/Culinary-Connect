@@ -1,0 +1,54 @@
+{% extends "base.html" %}{% load static %}
+{% block meta %}
+     <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Log In Flavor Fushion">
+    <meta property="og:description" content="Sign in to flavor fushion">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.host }}{% url 'users:login' %}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.host }}{% static 'core/img/flavor-fushion' %}">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="900">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="Log In Flavor Fushion">
+    <meta name="twitter:title" content="Log In Flavor Fushion">
+    <meta name="twitter:description" content="Sign in to flavor fushion">
+    <meta name="twitter:url" content="{{ request.scheme }}://{{ request.host }}{% url 'users:login' %}">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.host }}{% static 'core/img/flavor-fushion' %}">
+    <meta name="twitter:image:width" content="900">
+    <meta name="twitter:image:height" content="900">
+
+    <!-- Additional Meta Tags (optional) -->
+    <meta name="author" content="Opaque Maniac">
+    <meta name="description" content="login to your flavor fushion account">
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/login.css' %}">
+{% endblock css %}
+{% block title %}Sign In{% endblock %}
+{% block content %}
+<!-- Template for login -->
+<h2 class="section__title">Sign In</h2>
+<section class="section">
+    <form class="form login_form" method="post" action=".">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form__group">
+            <label class="form__label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% for error in field.errors %}
+            <small class="form__text form__text--error">{{ error }}</small>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <button class="btn btn--primary" type="submit">Sign In</button>
+    </form>
+
+    <div class="alt-container">
+        <a href="{% url 'users:register' %}">Don't have an account, sign up instead!</a>
+    </div>
+</section>
+{% endblock content %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'users/js/login.js' %}"></script>
+{% endblock js %}

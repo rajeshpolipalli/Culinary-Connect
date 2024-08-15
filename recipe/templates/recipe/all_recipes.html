@@ -1,0 +1,61 @@
+{% extends "base.html" %}{% load static %}
+{% block meta %}
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Recipes Flavor Fusion">
+    <meta property="og:description" content="All recipes on flavor fusion">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.host }}{% url 'recipe:all_recipes' %}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.host }}{% static 'core/img/flavor-fushion' %}">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="900">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="Recipes Flavor Fusion">
+    <meta name="twitter:title" content="Recipes Flavor Fusion">
+    <meta name="twitter:description" content="All recipes on flavor fusion">
+    <meta name="twitter:url" content="{{ request.scheme }}://{{ request.host }}{% url 'recipe:all_recipes' %}">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.host }}{% static 'core/img/flavor-fushion' %}">
+    <meta name="twitter:image:width" content="900">
+    <meta name="twitter:image:height" content="900">
+
+    <!-- Additional Meta Tags (optional) -->
+    <meta name="author" content="Opaque Maniac">
+    <meta name="description" content="all recipes on the flavor fushion platform">
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'recipe/css/all_recipes.css' %}">
+{% endblock css %}
+{% block title %}All recipes{% endblock %}
+{% block content %}
+
+<!-- This section contains all recipes -->
+
+<section class="section">
+    <h2 class="section__title">All recipes</h2>
+    <ul class="recipe__list">
+        {% for recipe in recipes %}
+        <li class="recipe__item">
+            <a href="{% url 'recipe:recipe_detail' recipe.id %}" class="recipe__link">
+                {% if recipe.cover_image %}
+                    <img src="{{ recipe.cover_image.url }}" alt="{{ recipe.title }}" class="recipe__image">
+                    {% else %}
+                    <img src="{% static 'core/img/default.png' %}" alt="{{ recipe.title }}" class="recipe__image">
+                {% endif %}
+                <div class="recipe_detail">
+                    <h3 class="recipe__title"><span>{{ recipe.title }}</span></h3>
+                    <p class="recipe__author">By: <span>{{ recipe.author.first_name }} {{ recipe.author.last_name }}</span></p>
+                    <p class="recipe__category">Category: <span>{{ recipe.category }}</span></p>
+                    <p class="recipe__description">{{ recipe.description }}</p>
+                    <p class="recipe__date-created">{{ recipe.date_created }}</p>
+                </div>
+            </a>
+        </li>
+        {% empty %}
+        <p class="no__recipe-text">No recipes yet</p>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock content %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'recipe/js/all_recipes.js' %}"></script>
+{% endblock js %}
