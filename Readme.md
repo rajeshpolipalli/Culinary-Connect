@@ -1,11 +1,11 @@
 
-Name:Polipalli Rajesh
+Name:  Polipalli Rajesh
 
 Company: CodeTech IT Solutions
 
 ID: CTO8DS6341
 
-Domain:Full Stack Developer
+Domain:  Full Stack Developer
 
 Duration: August 1st To Septmenber 1st
 
