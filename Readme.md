@@ -9,23 +9,23 @@ Domain:  Full Stack Developer
 
 Duration: August 1st To Septmenber 1st
 
-Mentor:
+Mentor: Saravani Gouni
 
 
 Project Overview:
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Project: Culinary Connect
 
-Objective:
+🎯 Objective:
 Culinary Connect is a web-based platform designed to allow users to share, discover, and manage recipes. Users can create accounts, upload their own recipes, search for recipes shared by others, and organize their favorite dishes. The platform also supports user interaction through comments and ratings, making it a social space for culinary enthusiasts.
 
-Tech Stack:
+🛠️ Tech Stack:
 
 Backend: Django (Python)
 Database: MySQL
 Frontend: HTML, CSS, JavaScript
 
-Features:
+💡 Features:
 User Authentication:  Sign up, login, and logout functionality.
                       User profile management.
                       
@@ -48,7 +48,7 @@ Responsive Design:    Ensuring the platform is accessible and user-friendly on m
 Admin Panel:     Django’s built-in admin panel for managing users, recipes, and other content.
 
 
-Key Insights:
+ 📋 Key Insights:
 
 Scalability:     By using Django's ORM with MySQL, the project can handle a large number of users and recipes, making it scalable 
                      as the user  base grows.
@@ -64,6 +64,6 @@ Community Building: The inclusion of interactive features like comments, ratings
                     encouraging active participation and content sharing.
 
 
-Conclusion:
+🎉 Conclusion:
 
 Culinary Connect serves as a comprehensive platform for food enthusiasts to explore, share, and engage with a global community, driven by the power of Django and modern web technologies. The project showcases the ability to combine backend functionality with frontend appeal, creating a seamless and enjoyable user experience.                   
