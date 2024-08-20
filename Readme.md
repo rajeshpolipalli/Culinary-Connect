@@ -18,6 +18,7 @@ Project: Culinary Connect
 
 ### 🎯 Objective:
 Culinary Connect is a web-based platform designed to allow users to share, discover, and manage recipes. Users can create accounts, upload their own recipes, search for recipes shared by others, and organize their favorite dishes. The platform also supports user interaction through comments and ratings, making it a social space for culinary enthusiasts.
+![Screenshot 2024-08-20 190003](https://github.com/user-attachments/assets/d5b04a21-4bcd-4efb-8303-e79ef0147d3a)
 
 ### 🛠️ Tech Stack:
 
