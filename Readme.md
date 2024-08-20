@@ -2,7 +2,8 @@
 Name:Polipalli Rajesh
 
 Company: CodeTech IT Solutions
-ID:
+
+ID: CTO8DS6341
 
 Domain:Full Stack Developer
 
@@ -64,4 +65,5 @@ Community Building: The inclusion of interactive features like comments, ratings
 
 
 Conclusion:
+
 Culinary Connect serves as a comprehensive platform for food enthusiasts to explore, share, and engage with a global community, driven by the power of Django and modern web technologies. The project showcases the ability to combine backend functionality with frontend appeal, creating a seamless and enjoyable user experience.                   
